@@ -30,6 +30,13 @@
     gap: 10px;
 }
 
+.imagen{
+    z-index: 2;
+    position: absolute;
+    top: 90px;
+    left: 90px;
+}
+
 .datos{
     background-color: white;
     width: 95%;
@@ -37,14 +44,8 @@
     margin: 10px auto;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.datos__imagen{
-    z-index: 2;
-    position: absolute;
-    top: -150px;
+    align-items: center;
+    flex-direction: column;
 }
 
 .tipos{
@@ -66,3 +67,54 @@
     
 }
 
+.contenedorCaracteristicas{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.caracteristicas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 80px;
+    height: 40px;
+}
+
+.caracteristicas__numeros{
+    display: flex;
+    gap: 5px
+}
+
+.descripcion{
+    padding: 15px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    width: 370px;
+}
+
+.stats__nombre{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stats__cantidad{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stats__barra{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

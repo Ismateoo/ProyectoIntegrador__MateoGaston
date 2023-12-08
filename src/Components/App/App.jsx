@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className={styles.contenedor}>
-      <Mainpoke />
+      {/* <Mainpoke /> */}
       <Pokemon/>
     </div>
   )

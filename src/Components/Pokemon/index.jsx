@@ -1,19 +1,24 @@
 import styles from "./styles.module.css";
+import "../../coloresTipos.css"
 
 export default function Pokemon() {
   return (
     <div className={styles.container}>
+
+
       <div className={styles.pokeball__contenedor}>
-        <img src="public/img/Pokeball.png" alt="" />
+        <img src="public/img/Pokeball.png" alt="" className={styles.pokeball} />
       </div>
 
       <div className={styles.nombreNumero}>
         <div className={styles.flechaNombre}>
           <img src="public/img/arrow-left.svg" alt="" />
-          <span>Bulbasaur</span>
+          <span className={styles.nombrePokemon}>Bulbasaur</span>
         </div>
-        <span>#001</span>
+        <span className={styles.numeroPokemon}>#001</span>
       </div>
+
+
 
       <div className={styles.imagen}>
         {<img src="public/img/bulbasaur.png" alt="" />}
@@ -21,8 +26,8 @@ export default function Pokemon() {
 
       <div className={styles.datos}>
         <div className={styles.tipos}>
-          <span className={styles.tipo}>Grass</span>
-          <span className={styles.tipo}>Poison</span>
+          <span className={styles.tipo} id={styles.tipo1}>Grass</span>
+          <span className={styles.tipo} id={styles.tipo2}>Poison</span>
         </div>
         <div className={styles.about}>
           <p>About</p>
@@ -39,7 +44,7 @@ export default function Pokemon() {
             </div>
           </div>
 
-          <div className={styles.caracteristicas}>
+          <div className={styles.caracteristicas__peso}>
             <div className={styles.caracteristicas__numeros}>
               <img src="public/img/Height.svg" alt="" />
               <span>0,7 m</span>
@@ -88,16 +93,16 @@ export default function Pokemon() {
                 </div>
 
                 <div className={styles.stats__barra}>
-                  <span>---------------------------------------------</span>
-                  <span>---------------------------------------------</span>
-                  <span>---------------------------------------------</span>
-                  <span>---------------------------------------------</span>
-                  <span>---------------------------------------------</span>
-                  <span>---------------------------------------------</span>
+                  <span>-------------------------</span>
+                  <span>-------------------------</span>
+                  <span>-------------------------</span>
+                  <span>-------------------------</span>
+                  <span>-------------------------</span>
+                  <span>-------------------------</span>
                 </div>
             </div>
         </div>
-      </div>
+  </div>
     </div>
   );
 }

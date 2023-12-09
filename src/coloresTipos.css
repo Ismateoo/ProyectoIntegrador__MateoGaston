@@ -2,72 +2,144 @@
     color: #B69E31;   
 }
 
+.rock--background{
+    background-color: #B69E31;   
+}
+
 .ghost{
     color: #70559B;   
+}
+
+.ghost--background{
+    background-color: #70559B;   
 }
 
 .steel{
     color: #B7B9D0;   
 }
 
+.steel--background{
+    background-color: #B7B9D0;   
+}
+
 .water{
     color: #6493EB;   
+}
+
+.water--background{
+    background-color: #6493EB;   
 }
 
 .grass{
     color: #74CB48;   
 }
 
+.grass--background{
+    background-color: #74CB48;   
+}
+
 .psychic{
     color: #EB5584;   
+}
+
+.psychic--background{
+    background-color: #EB5584;   
 }
 
 .ice{
     color: #9AD6DF;   
 }
 
+.ice--background{
+    background-color: #9AD6DF;   
+}
+
 .dark{
     color: #75574C;   
+}
+
+.dark--background{
+    background-color: #75574C;   
 }
 
 .fairy{
     color: #E69EAC;   
 }
 
+.fairy--background{
+    background-color: #E69EAC;   
+}
+
 .normal{
     color: #AAA67F;   
+}
+
+.normal--background{
+    background-color: #AAA67F;   
 }
 
 .fighting{
     color: #C12239   
 }
 
+.fighting--background{
+    background-color: #C12239   
+}
+
 .flying{
     color: #A891EC;   
+}
+
+.flying--background{
+    background-color: #A891EC;   
 }
 
 .poison{
     color: #A43E9E;   
 }
 
+.poison--background{
+    background-color: #A43E9E;   
+}
+
 .ground{
     color: #DEC16B;   
+}
+
+.ground--background{
+    background-color: #DEC16B;   
 }
 
 .bug{
     color: #A7B723;   
 }
 
+.bug--background{
+    background-color: #A7B723;   
+}
+
 .fire{
     color: #F57D31;   
+}
+
+.fire--background{
+    background-color: #F57D31;   
 }
 
 .electric{
     color: #F9CF30;   
 }
 
+.electric--background{
+    background-color: #F9CF30;   
+}
+
 .dragon{
     color: #7037FF;   
+}
+
+.dragon--background{
+    background-color: #7037FF;   
 }
 
    

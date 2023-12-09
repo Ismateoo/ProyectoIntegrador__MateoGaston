@@ -1,4 +1,4 @@
-import styles from "./styles.module.css";   // Importamos los estilos
+import styles from "./styles.module.css"; 
 
 function Iconos(){
     return(
@@ -10,9 +10,6 @@ function Iconos(){
             <p>Bulbasaur</p>
         </div>
             
-        
-
- 
 
          </>
     );  

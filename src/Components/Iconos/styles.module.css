@@ -3,46 +3,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #74CB48;
+    justify-content: center;
+    border: 2px solid green;
     border-radius: 15px;
-    max-height: 120px;
-    max-width: 120px;
-    color:#74CB48;
+    width: 120px;
+    height: 120px;
 }
 
 .id{
    position: absolute;
-   font-size: 13px;
    top: 0;
    right: 0;
-   margin-right: 13px;
-   margin-top: 3px;
+   margin-right: 0;
 }
 
 .pokemonimagen{
     width: 80px;
     height: 80px;
-}
-
-.backfondo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #74CB48;
-    width: 100%;
-    height: 30px;
-    border-radius: 0 0 15px 15px;
-}
-
-.backfondo p{
-    font-size: 13px;
-    color: #fff;
-}
-
-.imagencentrada{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
 }

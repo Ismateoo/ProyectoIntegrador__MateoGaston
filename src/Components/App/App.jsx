@@ -11,7 +11,7 @@ function App() {
     <div className={styles.contenedor}>
       <Mainpoke />
       <Iconos/>
-      <Pokemon/>
+      {/* <Pokemon/> */}
     </div>
   )
 }

@@ -6,8 +6,9 @@ function Iconos(){
          
         <div className={styles.pokemoncard}>
             <p className={styles.id}>01</p>
-            <img src={"public/img/bulbasaur.png"} className={styles.pokemonimagen}/>
-            <p>Bulbasaur</p>
+            <div className={styles.imagencentrada}><img src={"public/img/bulbasaur.png"} className={styles.pokemonimagen}/></div>
+            <div className={styles.backfondo}><p>Bulbasaur</p></div>
+            
         </div>
             
 
@@ -15,3 +16,9 @@ function Iconos(){
     );  
 }
 export default Iconos;
+
+
+
+
+
+

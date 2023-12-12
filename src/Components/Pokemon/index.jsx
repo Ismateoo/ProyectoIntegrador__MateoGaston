@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import "../../coloresTipos.css"
+import "../../coloresTipos.css";
 
 export default function Pokemon() {
   return (
@@ -18,10 +18,8 @@ export default function Pokemon() {
         <span className={styles.numeroPokemon}>#001</span>
       </div>
 
-
-
       <div className={styles.imagen}>
-        {<img src="public/img/bulbasaur.png" alt="" />}
+        {<img src="public/img/bulbasaur.png" alt="" className={styles.imagen2}/>}
       </div>
 
       <div className={styles.datos}>
@@ -29,11 +27,12 @@ export default function Pokemon() {
           <span className={styles.tipo} id={styles.tipo1}>Grass</span>
           <span className={styles.tipo} id={styles.tipo2}>Poison</span>
         </div>
-        <div className={styles.about}>
+        <div className={`${styles.about} grass`}>
           <p>About</p>
         </div>
 
         <div className={styles.contenedorCaracteristicas}>
+
           <div className={styles.caracteristicas}>
             <div className={styles.caracteristicas__numeros}>
               <img src="public/img/Weight.svg" alt="" />
@@ -44,7 +43,7 @@ export default function Pokemon() {
             </div>
           </div>
 
-          <div className={styles.caracteristicas__peso}>
+          <div className={`${styles.caracteristicas} ${styles.caracteristicas__peso}`}>
             <div className={styles.caracteristicas__numeros}>
               <img src="public/img/Height.svg" alt="" />
               <span>0,7 m</span>
@@ -63,6 +62,8 @@ export default function Pokemon() {
               <span>Moves</span>
             </div>
           </div>
+
+
         </div>
 
         <div className={styles.descripcion}>
@@ -70,11 +71,11 @@ export default function Pokemon() {
         </div>
 
         <div className={styles.contenedorStats}>
-            <div className={styles.statsTitulo}>
+            <div className={`${styles.statsTitulo} grass`}>
                 <p>Base Stats</p>
             </div>
             <div className={styles.stats}>
-                <div className={styles.stats__nombre}>
+                <div className={`${styles.stats__nombre} grass`}>
                   <span>HP</span>
                   <span>ATK</span>
                   <span>DEF</span>
@@ -93,12 +94,12 @@ export default function Pokemon() {
                 </div>
 
                 <div className={styles.stats__barra}>
-                  <span>-------------------------</span>
-                  <span>-------------------------</span>
-                  <span>-------------------------</span>
-                  <span>-------------------------</span>
-                  <span>-------------------------</span>
-                  <span>-------------------------</span>
+                  <span>-----------------------</span>
+                  <span>-----------------------</span>
+                  <span>-----------------------</span>
+                  <span>-----------------------</span>
+                  <span>-----------------------</span>
+                  <span>-----------------------</span>
                 </div>
             </div>
         </div>

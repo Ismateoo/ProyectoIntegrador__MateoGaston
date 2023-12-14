@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import React from "react";
+import "../../coloresTipos.css";
 
 function Iconos() {
-  const [listapokemon, setlistaPokemon] = usestate([]);
+  const [listapokemon, setlistaPokemon] = useState([]);
 
-  const obtenerPokemon = async () => {
+  const obtenerPokemon = async (cantidad) => {
     for (let index = 1; index <= cantidad; index++) {
       const response = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${index}/`
@@ -24,50 +25,32 @@ function Iconos() {
     }
   };
   useEffect(() => {
-    obtenerPokemon(2);
-  }, []);
-
-  /*  const [pokemon, setPokemones] = useState(null);
-
-  useEffect(() => {
-    const getPokemones = async () => {
-      const response = await fetch("https://pokeapi.co/api/v2/pokemon/1/");
-      const p = await response.json();
-      setPokemones(p);
-      console.log(p);
-    };
-    getPokemones();
+    obtenerPokemon(151);
   }, []);
 
   return (
     <>
-      {pokemon && (
-        <div className={styles.pokemoncard}>
-          <p className={styles.id}>{pokemon.id}</p>
-          <div className={styles.imagencentrada}>
-            <img
-              src={pokemon.sprites.other["official-artwork"].front_default}
-              className={styles.pokemonimagen}
-            />
-          </div>
-          <div className={styles.backfondo}>
-            <p>{pokemon.name}</p>
-          </div>
-        </div>
-      )}
-    </>
-  );
-}*/
-
-  return (
-    <>
-      {listapokemon.map((pokemon) => {
-        return (
-          <div className={styles.backfondo}>
-              <p>{pokemon.name}</p>
-            </div>
-        );
-      })}
+      <div className={styles.contenedorTarjetas}>
+        {listapokemon.map((pokemon) => {
+          return (
+              <div className={`${styles.pokemoncard} ${pokemon.tipo}--borde`}>
+                <p className={`${styles.id} ${pokemon.tipo}`}>{pokemon.id}</p>
+                <div className={styles.imagencentrada}>
+                  <img
+                    src={pokemon.imagen}
+                    alt=""
+                    className={styles.pokemonimagen}
+                  />
+                </div>
+                <div
+                  className={`${styles.backfondo} ${pokemon.tipo}--background ${pokemon.tipo}--borde`}
+                >
+                  <p>{pokemon.name}</p>
+                </div>
+              </div>
+          );
+        })}
+      </div>
     </>
   );
 }

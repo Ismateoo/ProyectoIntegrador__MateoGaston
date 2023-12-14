@@ -8,11 +8,13 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
+    <>
     <div className={styles.contenedor}>
       <Mainpoke />
       <Iconos />
-      {/* <Pokemon /> */}
     </div>
+     {/* <Pokemon /> */}
+    </>
   );
 }
 

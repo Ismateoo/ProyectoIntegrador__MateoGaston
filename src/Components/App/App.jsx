@@ -18,6 +18,7 @@ function App() {
       <Iconos search={search} />
       </div>
       {/* <Pokemon /> */}
+ main
     </>
   );
 }

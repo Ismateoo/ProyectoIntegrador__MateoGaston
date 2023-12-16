@@ -1,0 +1,21 @@
+.tipos{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    gap: 20px;
+}
+
+.tipo{
+    border-radius: 20px;
+    padding: 2px 10px;
+    color: white;
+}
+
+#tipo1{
+    background-color: #74CB48;
+}
+
+#tipo2{
+    background-color: #A43E9E;  
+}

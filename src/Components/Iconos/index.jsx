@@ -28,6 +28,7 @@ function Iconos({ search }) {
 
   useEffect(() => {
     obtenerPokemon(50);
+ main
   }, []);
 
   useEffect(() => {

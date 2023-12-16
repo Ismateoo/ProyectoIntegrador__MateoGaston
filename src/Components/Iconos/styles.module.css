@@ -41,6 +41,7 @@
 .backfondo p{
     font-size: 13px;
     color: #fff;
+    text-transform: capitalize;
 }
 
 .imagencentrada{

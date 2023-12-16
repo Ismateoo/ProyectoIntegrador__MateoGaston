@@ -1,60 +1,11 @@
 .container{
     background-color: #74cb48;
-    height: 100vh;
+    height: 844px;
+    width: 390px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-}
-
-.pokeball__contenedor{
-    position: absolute;
-    z-index: 1;
-    right: 10px;
-    top: 20px;
-}
-
-.pokeball{
-    opacity: 0.1;
-    width: 230px;
-    height: 230px;
-}
-
-.nombreNumero{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    z-index: 2;
-    margin: 20px;
-    margin-top: 30px;
-}
-
-.nombrePokemon{
-    font-weight: bold;
-    font-size: 1.7rem;
-}
-
-.numeroPokemon{
-    font-weight: bold;
-}
-
-.flechaNombre{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.imagen{
-    z-index: 2;
-    position: absolute;
-    top: 120px;
-    left: 90px;
-}
-
-.imagen2{
-   width: 220px;
-   height: 220px;
 }
 
 .datos{
@@ -68,96 +19,3 @@
     flex-direction: column;
 }
 
-.tipos{
-    margin-top: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: self-start;
-    gap: 20px;
-}
-
-.tipo{
-    border-radius: 20px;
-    padding: 2px 10px;
-    color: white;
-}
-
-#tipo1{
-    background-color: #74CB48;
-}
-
-#tipo2{
-    background-color: #A43E9E;  
-}
-
-.about{
-    font-weight: bold;
-}
-
-.contenedorCaracteristicas{
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 12px;
-}
-
-.caracteristicas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    width: 80px;
-    height: 60px;
-}
-
-.caracteristicas__numeros{
-    display: flex;
-    gap: 5px;
-}
-
-.caracteristicas__peso{
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
-    padding: 0 20px;
-}
-
-.descripcion{
-   padding: 18px; 
-   font-size: 13px;
-}
-
-.statsTitulo{
-    text-align: center;
-    font-weight: bold;
-}
-
-.stats{
-    display: flex;
-    flex-direction: row;
-    width: 370px;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: right;
-}
-
-.stats__nombre{
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-}
-
-.stats__cantidad{
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid grey;
-    padding-left: 20px;
-}
-
-.stats__barra{
-    display: flex;
-    flex-direction: column
-}

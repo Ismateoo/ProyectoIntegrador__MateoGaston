@@ -25,7 +25,7 @@ function Iconos() {
     }
   };
   useEffect(() => {
-    obtenerPokemon(151);
+    obtenerPokemon(1000);
   }, []);
 
   return (

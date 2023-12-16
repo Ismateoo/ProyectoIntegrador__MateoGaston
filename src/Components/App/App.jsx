@@ -9,11 +9,11 @@ function App() {
 
   return (
     <>
-    <div className={styles.contenedor}>
+   {/*  <div className={styles.contenedor}>
       <Mainpoke />
       <Iconos />
-    </div>
-     {/* <Pokemon /> */}
+    </div> */}
+     <Pokemon />
     </>
   );
 }

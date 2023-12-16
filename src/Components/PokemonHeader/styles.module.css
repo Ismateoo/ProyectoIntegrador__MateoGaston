@@ -1,0 +1,49 @@
+.pokeball__contenedor{
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top: 20px;
+}
+
+.pokeball{
+    opacity: 0.1;
+    width: 230px;
+    height: 230px;
+}
+
+.nombreNumero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 2;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.nombrePokemon{
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.numeroPokemon{
+    font-weight: bold;
+}
+
+.flechaNombre{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.imagen{
+    z-index: 2;
+    position: absolute;
+    top: 120px;
+    left: 90px;
+}
+
+.imagen2{
+   width: 220px;
+   height: 220px;
+}

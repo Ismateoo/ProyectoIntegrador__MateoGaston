@@ -1,0 +1,32 @@
+.statsTitulo{
+    text-align: center;
+    font-weight: bold;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    width: 370px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: right;
+}
+
+.stats__nombre{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.stats__cantidad{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid grey;
+    padding-left: 20px;
+}
+
+.stats__barra{
+    display: flex;
+    flex-direction: column
+}

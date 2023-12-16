@@ -1,6 +1,6 @@
-import styles from "./styles.module.css"; // Importamos los estilos
+import styles from "./styles.module.css"; 
 
-function Mainpoke() {
+function Mainpoke({ search, handleSearchChange }) {
   return (
     <div className={styles.app}>
       <header className={styles.header}>
@@ -22,13 +22,15 @@ function Mainpoke() {
           type="search"
           placeholder="Buscar"
           className={styles.searchBar}
+          value={search}
+          onChange={handleSearchChange}
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           stroke="black"
           viewBox="0 0 24 24"
-          className={styles.searchIcon}
+          className={styles.searchIcon} 
         >
           <path
             strokeLinecap="round"
@@ -41,4 +43,5 @@ function Mainpoke() {
     </div>
   );
 }
+
 export default Mainpoke;

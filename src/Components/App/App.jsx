@@ -6,14 +6,19 @@ import Iconos from "../Iconos";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [search, setSearch] = useState('');
+  const handleSearchChange = (event) => {
+    setSearch(event.target.value);
+  };
 
   return (
     <>
-   {/*  <div className={styles.contenedor}>
-      <Mainpoke />
-      <Iconos />
-    </div> */}
-     <Pokemon />
+      <div className={styles.contenedor}>
+      <Mainpoke search={search} handleSearchChange={handleSearchChange} />
+      <Iconos search={search} />
+      </div>
+      {/* <Pokemon /> */}
+ main
     </>
   );
 }

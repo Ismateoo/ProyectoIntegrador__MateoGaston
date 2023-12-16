@@ -3,8 +3,9 @@ import styles from "./styles.module.css";
 import React from "react";
 import "../../coloresTipos.css";
 
-function Iconos() {
+function Iconos({ search }) {
   const [listapokemon, setlistaPokemon] = useState([]);
+  const [filteredPokemons, setFilteredPokemons] = useState([]);
 
   const obtenerPokemon = async (cantidad) => {
     for (let index = 1; index <= cantidad; index++) {
@@ -24,35 +25,52 @@ function Iconos() {
       ]);
     }
   };
+
   useEffect(() => {
-    obtenerPokemon(1000);
+    obtenerPokemon(50);
+ main
   }, []);
 
+  useEffect(() => {
+    if (search) {
+      setFilteredPokemons(listapokemon.filter(pokemon => pokemon.name.toLowerCase().includes(search.toLowerCase())));
+    } else {
+      setFilteredPokemons(listapokemon);
+    }
+  }, [listapokemon, search]);
+
   return (
-    <>
-      <div className={styles.contenedorTarjetas}>
-        {listapokemon.map((pokemon) => {
-          return (
-              <div className={`${styles.pokemoncard} ${pokemon.tipo}--borde`}>
-                <p className={`${styles.id} ${pokemon.tipo}`}>{pokemon.id}</p>
-                <div className={styles.imagencentrada}>
-                  <img
-                    src={pokemon.imagen}
-                    alt=""
-                    className={styles.pokemonimagen}
-                  />
-                </div>
-                <div
-                  className={`${styles.backfondo} ${pokemon.tipo}--background ${pokemon.tipo}--borde`}
-                >
-                  <p>{pokemon.name}</p>
-                </div>
-              </div>
-          );
-        })}
-      </div>
-    </>
+    <div className={styles.contenedorTarjetas}>
+      {filteredPokemons.map((pokemon) => {
+        return (
+          <div  key={pokemon.id} className={`${styles.pokemoncard} ${pokemon.tipo}--borde`}>
+            <p className={`${styles.id} ${pokemon.tipo}`}>#{String(pokemon.id).padStart(3,"0")}</p>
+            <div className={styles.imagencentrada}>
+              <img
+                src={pokemon.imagen}
+                alt=""
+                className={styles.pokemonimagen}
+              />
+            </div>
+            <div
+              className={`${styles.backfondo} ${pokemon.tipo}--background ${pokemon.tipo}--borde`}
+            >
+              <p>{pokemon.name}</p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }
 
 export default Iconos;
+
+
+
+
+/* ULTILZIAR .sort para filtrar y .filter para el filtro */
+
+
+
+

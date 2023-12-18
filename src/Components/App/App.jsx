@@ -17,8 +17,6 @@ function App() {
       <Mainpoke search={search} handleSearchChange={handleSearchChange} />
       <Iconos search={search} />
       </div>
-      {/* <Pokemon /> */}
- main
     </>
   );
 }

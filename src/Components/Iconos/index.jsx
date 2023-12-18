@@ -2,12 +2,16 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import React from "react";
 import "../../coloresTipos.css";
+import { Link} from "react-router-dom";
+import usePokemon from "../../Hooks/usePokemon";
 
-function Iconos({ search }) {
-  const [listapokemon, setlistaPokemon] = useState([]);
+function Iconos({ search, listapokemon}) {
+ /*  const [listapokemon, setlistaPokemon] = useState([]); */
   const [filteredPokemons, setFilteredPokemons] = useState([]);
+  const {pokemon} = usePokemon(listapokemon);
+  console.log(listapokemon);
 
-  const obtenerPokemon = async (cantidad) => {
+ /*  const obtenerPokemon = async (cantidad) => {
     for (let index = 1; index <= cantidad; index++) {
       const response = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${index}/`
@@ -24,13 +28,13 @@ function Iconos({ search }) {
         },
       ]);
     }
-  };
+  }; */
 
-  useEffect(() => {
+
+/*   useEffect(() => {
     obtenerPokemon(50);
- main
   }, []);
-
+ */
   useEffect(() => {
     if (search) {
       setFilteredPokemons(listapokemon.filter(pokemon => pokemon.name.toLowerCase().includes(search.toLowerCase())));
@@ -43,6 +47,7 @@ function Iconos({ search }) {
     <div className={styles.contenedorTarjetas}>
       {filteredPokemons.map((pokemon) => {
         return (
+          <Link to={`/pokemon/${pokemon.id}`}>
           <div  key={pokemon.id} className={`${styles.pokemoncard} ${pokemon.tipo}--borde`}>
             <p className={`${styles.id} ${pokemon.tipo}`}>#{String(pokemon.id).padStart(3,"0")}</p>
             <div className={styles.imagencentrada}>
@@ -58,6 +63,7 @@ function Iconos({ search }) {
               <p>{pokemon.name}</p>
             </div>
           </div>
+          </Link>
         );
       })}
     </div>

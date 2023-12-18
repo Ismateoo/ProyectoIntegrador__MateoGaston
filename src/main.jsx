@@ -10,11 +10,11 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App/>,
     
   },
   {
-    path: "/pokemon",
+    path: "/pokemon/:id",
     element: <Pokemon />,
   },
   

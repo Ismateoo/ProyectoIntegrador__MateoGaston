@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-export default function PokemonHeader() {
+export default function PokemonHeader({name, id, imagen}) {
   return (
     <>
       <div className={styles.pokeball__contenedor}>
@@ -10,15 +10,15 @@ export default function PokemonHeader() {
       <div className={styles.nombreNumero}>
         <div className={styles.flechaNombre}>
           <img src="public/img/arrow-left.svg" alt="" />
-          <span className={styles.nombrePokemon}>Bulbasaur</span>
+          <span className={styles.nombrePokemon}>{name}</span>
         </div>
-        <span className={styles.numeroPokemon}>#001</span>
+        <span className={styles.numeroPokemon}>{id}</span>
       </div>
 
       <div className={styles.imagen}>
         {
           <img
-            src="public/img/bulbasaur.png"
+            src={imagen}
             alt=""
             className={styles.imagen2}
           />

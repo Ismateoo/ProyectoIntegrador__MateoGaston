@@ -4,12 +4,12 @@ export default function PokemonHeader({name, id, imagen}) {
   return (
     <>
       <div className={styles.pokeball__contenedor}>
-        <img src="public/img/Pokeball.png" alt="" className={styles.pokeball} />
+        <img src="../public/img/Pokeball.png" alt="" className={styles.pokeball} />
       </div>
 
       <div className={styles.nombreNumero}>
         <div className={styles.flechaNombre}>
-          <img src="public/img/arrow-left.svg" alt="" />
+          <img src="../public/img/arrow-left.svg" alt="" />
           <span className={styles.nombrePokemon}>{name}</span>
         </div>
         <span className={styles.numeroPokemon}>{id}</span>

@@ -27,7 +27,7 @@ export default function Pokemon() {
   let pokemonImagen = pokemon.imagen
   let color = pokemon.color
   let tipos = pokemon.tipos
-  let pokemonHabilidades = pokemon.habilidades
+  let pokemonHabilidades = pokemon.habilidades;
   let pokemonAltura= pokemon.altura
   let pokemonPeso= pokemon.peso
   let pokemonDescripcion= pokemon.descripcion

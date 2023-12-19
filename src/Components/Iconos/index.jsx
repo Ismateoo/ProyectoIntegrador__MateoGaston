@@ -5,30 +5,9 @@ import "../../coloresTipos.css";
 import { Link} from "react-router-dom";
 import usePokemon from "../../Hooks/usePokemon";
 
-function Iconos({ search, /* listapokemon */}) {
-  /* const [listapokemon, setlistaPokemon] = useState([]); */
+function Iconos({ search}) {
   const [filteredPokemons, setFilteredPokemons] = useState([]);
   const {listapokemon, obtenerPokemon} = usePokemon()
-  
-/*   const obtenerPokemon = async (cantidad) => {
-    for (let index = 1; index <= cantidad; index++) {
-      const response = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${index}/`
-      );
-      const data = await response.json();
-      setlistaPokemon((prev) => [
-        ...prev,
-        {
-          id: data.id,
-          name: data.name,
-          imagen: data.sprites.other["official-artwork"].front_default,
-          habilidad: data.abilities[0].ability.name,
-          tipo: data.types[0].type.name,
-        },
-      ]);
-    }
-  }; */
-
 
   useEffect(() => {
     obtenerPokemon(1000);

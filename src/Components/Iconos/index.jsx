@@ -31,7 +31,7 @@ function Iconos({ search, /* listapokemon */}) {
 
 
   useEffect(() => {
-    obtenerPokemon(50);
+    obtenerPokemon(1000);
   }, []);
 
   useEffect(() => {

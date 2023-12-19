@@ -26,17 +26,27 @@ export default function usePokemon(){
         const response2 = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${id}/`
         );
+        const responseDescripcion= await fetch(
+          `https://pokeapi.co/api/v2/pokemon-species/${id}/`
+        )
         const data2 = await response2.json();
+        const dataDescripcion = await responseDescripcion.json();
         setPokemon ({
           id: data2.id,
           name: data2.name,
           imagen: data2.sprites.other["official-artwork"].front_default,          
-          /* tipo1: data2.types[0].type.name,
-          tipo2: data2.types[1].type.name, */
+          color: data2.types[0].type.name,
           tipos: data2.types,
-          habilidad1: data2.abilities[0].ability.name,
-          habilidad2: data2.abilities[1].ability.name,
-          altura: data2.height
+          habilidades: data2.abilities,
+          altura: data2.height,
+          peso: data2.weight,
+          descripcion: dataDescripcion.flavor_text_entries[1].flavor_text,
+          hp: data2.stats[0].base_stat,
+          atk: data2.stats[1].base_stat,
+          def: data2.stats[2].base_stat,
+          satk: data2.stats[3].base_stat,
+          sdef: data2.stats[4].base_stat,
+          spd: data2.stats[5].base_stat,
         })
       }
 

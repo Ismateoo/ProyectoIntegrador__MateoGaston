@@ -24,6 +24,7 @@
 .nombrePokemon{
     font-weight: bold;
     font-size: 1.7rem;
+    text-transform: capitalize;
 }
 
 .numeroPokemon{
@@ -44,6 +45,6 @@
 }
 
 .imagen2{
-   width: 220px;
-   height: 220px;
+   width: 250px;
+   height: 250px;
 }

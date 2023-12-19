@@ -31,3 +31,9 @@
     border-right: 1px solid grey;
     padding: 0 20px;
 }
+
+.caracteristicas__habilidades{
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+}

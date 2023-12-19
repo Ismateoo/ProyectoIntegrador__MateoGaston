@@ -1,14 +1,14 @@
 import styles from "./styles.module.css";
 
-export default function PokemonStats(){
+export default function PokemonStats({hp, atk, def, satk, sdef, spd, color}){
     return(
         <>
          <div className={styles.contenedorStats}>
             <div className={`${styles.statsTitulo} grass`}>
-                <p>Base Stats</p>
+                <p className={color}>Base Stats</p>
             </div>
             <div className={styles.stats}>
-                <div className={`${styles.stats__nombre} grass`}>
+                <div className={`${styles.stats__nombre} ${color}`}>
                   <span>HP</span>
                   <span>ATK</span>
                   <span>DEF</span>
@@ -18,12 +18,12 @@ export default function PokemonStats(){
                 </div>
 
                 <div className={styles.stats__cantidad}>
-                  <span>045</span>
-                  <span>049</span>
-                  <span>049</span>
-                  <span>065</span>
-                  <span>065</span>
-                  <span>045</span>
+                  <span>{hp}</span>
+                  <span>{atk}</span>
+                  <span>{def}</span>
+                  <span>{satk}</span>
+                  <span>{sdef}</span>
+                  <span>{spd}</span>
                 </div>
 
                 <div className={styles.stats__barra}>

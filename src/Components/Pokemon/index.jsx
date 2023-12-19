@@ -25,27 +25,31 @@ export default function Pokemon() {
   let pokemonId = pokemon.id
   let pokemonName = pokemon.name
   let pokemonImagen = pokemon.imagen
- /*  let pokemonTipo1 = pokemon.tipo1
-  let pokemonTipo2 = pokemon.tipo2 */
+  let color = pokemon.color
   let tipos = pokemon.tipos
-  let pokemonHabilidad = pokemon.habilidad
-  let pokemonHabilidad2= pokemon.habilidad2
-  let pokemonAltura= pokemon.habilidad2
+  let pokemonHabilidades = pokemon.habilidades
+  let pokemonAltura= pokemon.altura
+  let pokemonPeso= pokemon.peso
+  let pokemonDescripcion= pokemon.descripcion
+  let pokemonHp = pokemon.hp
+  let pokemonAtk = pokemon.atk
+  let pokemonDef = pokemon.def
+  let pokemonSatk = pokemon.satk
+  let pokemonSdef = pokemon.sdef
+  let pokemonSpd = pokemon.spd
   
-
-
   return (
-    <div className={styles.container}>
+    <div className={`${color}--background ${styles.container}`}>
       <PokemonHeader name={pokemonName} id={pokemonId} imagen={pokemonImagen}/>
 
       <div className={styles.datos}>
         <PokemonTipos tipos={tipos}/>
 
-        <PokemonAbout />
+        <PokemonAbout peso={pokemonPeso} altura={pokemonAltura} habilidades={pokemonHabilidades} color={color}/>
 
-        <PokemonDescription />
+        <PokemonDescription descripcion={pokemonDescripcion}/>
 
-        <PokemonStats />
+        <PokemonStats color={color} hp={pokemonHp} atk={pokemonAtk} def={pokemonDef} satk={pokemonSatk} sdef={pokemonSdef} spd={pokemonSpd}/>
       </div>
     </div>
   );

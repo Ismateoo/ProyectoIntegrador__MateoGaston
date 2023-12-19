@@ -6,12 +6,12 @@ import { Link} from "react-router-dom";
 import usePokemon from "../../Hooks/usePokemon";
 
 function Iconos({ search, listapokemon}) {
- /*  const [listapokemon, setlistaPokemon] = useState([]); */
+   const [listapokemon, setlistaPokemon] = useState([]); 
   const [filteredPokemons, setFilteredPokemons] = useState([]);
   const {pokemon} = usePokemon(listapokemon);
   console.log(listapokemon);
 
- /*  const obtenerPokemon = async (cantidad) => {
+   const obtenerPokemon = async (cantidad) => {
     for (let index = 1; index <= cantidad; index++) {
       const response = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${index}/`
@@ -28,13 +28,13 @@ function Iconos({ search, listapokemon}) {
         },
       ]);
     }
-  }; */
+  }; 
 
 
-/*   useEffect(() => {
+   useEffect(() => {
     obtenerPokemon(50);
   }, []);
- */
+ 
   useEffect(() => {
     if (search) {
       setFilteredPokemons(listapokemon.filter(pokemon => pokemon.name.toLowerCase().includes(search.toLowerCase())));

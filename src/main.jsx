@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './Components/App/App'
 import Pokemon from './Components/Pokemon'
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
+/* const [id, setId] = useState(); */
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/pokemon/:id",
-    element: <Pokemon />,
+    element: <Pokemon/>,
   },
   
 ]);

@@ -5,13 +5,12 @@ import "../../coloresTipos.css";
 import { Link} from "react-router-dom";
 import usePokemon from "../../Hooks/usePokemon";
 
-function Iconos({ search, listapokemon}) {
- /*  const [listapokemon, setlistaPokemon] = useState([]); */
+function Iconos({ search, /* listapokemon */}) {
+  /* const [listapokemon, setlistaPokemon] = useState([]); */
   const [filteredPokemons, setFilteredPokemons] = useState([]);
-  const {pokemon} = usePokemon(listapokemon);
-  console.log(listapokemon);
-
- /*  const obtenerPokemon = async (cantidad) => {
+  const {listapokemon, obtenerPokemon} = usePokemon()
+  
+/*   const obtenerPokemon = async (cantidad) => {
     for (let index = 1; index <= cantidad; index++) {
       const response = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${index}/`
@@ -31,10 +30,10 @@ function Iconos({ search, listapokemon}) {
   }; */
 
 
-/*   useEffect(() => {
+  useEffect(() => {
     obtenerPokemon(50);
   }, []);
- */
+
   useEffect(() => {
     if (search) {
       setFilteredPokemons(listapokemon.filter(pokemon => pokemon.name.toLowerCase().includes(search.toLowerCase())));
@@ -44,7 +43,7 @@ function Iconos({ search, listapokemon}) {
   }, [listapokemon, search]);
 
   return (
-    <div className={styles.contenedorTarjetas}>
+      <div className={styles.contenedorTarjetas}>
       {filteredPokemons.map((pokemon) => {
         return (
           <Link to={`/pokemon/${pokemon.id}`}>
@@ -67,7 +66,14 @@ function Iconos({ search, listapokemon}) {
         );
       })}
     </div>
-  );
+   
+    
+      
+      
+    
+  ); 
+
+  
 }
 
 export default Iconos;

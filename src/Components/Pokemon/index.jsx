@@ -20,7 +20,6 @@ export default function Pokemon() {
   useEffect(() => {
     mostrarUnPokemon(id);
   }, [id]);
-  
  
   
   let pokemonId = pokemon.id

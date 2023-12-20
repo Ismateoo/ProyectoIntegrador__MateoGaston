@@ -40,7 +40,7 @@ export default function usePokemon(){
           habilidades: data2.abilities,
           altura: data2.height,
           peso: data2.weight,
-          descripcion: dataDescripcion.flavor_text_entries[1].flavor_text,
+          descripcion: dataDescripcion.flavor_text_entries[1].flavor_text.replace(/[\n\f]/g, ' '),
           hp: data2.stats[0].base_stat,
           atk: data2.stats[1].base_stat,
           def: data2.stats[2].base_stat,

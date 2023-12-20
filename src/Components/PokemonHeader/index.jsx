@@ -1,4 +1,5 @@
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 
 export default function PokemonHeader({name, id, imagen}) {
   return (
@@ -9,7 +10,9 @@ export default function PokemonHeader({name, id, imagen}) {
 
       <div className={styles.nombreNumero}>
         <div className={styles.flechaNombre}>
-          <img src="../public/img/arrow-left.svg" alt="" />
+          <Link to = {`/`}>
+          <img src="../public/img/arrow-left.svg" alt="" className={styles.flechaVolver}/>
+          </Link>
           <span className={styles.nombrePokemon}>{name}</span>
         </div>
         <span className={styles.numeroPokemon}>{id}</span>

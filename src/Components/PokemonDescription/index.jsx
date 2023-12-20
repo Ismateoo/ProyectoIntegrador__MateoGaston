@@ -4,7 +4,7 @@ export default function PokemonDescription({descripcion}){
     return(
         <>
          <div className={styles.descripcion}>
-          <p>{descripcion}</p>
+          <p>{descripcion && descripcion.replace(/\/f/g, '')}</p>
         </div>
         </>
     )

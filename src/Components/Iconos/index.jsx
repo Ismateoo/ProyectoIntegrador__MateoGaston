@@ -10,7 +10,7 @@ function Iconos({ search}) {
   const {listapokemon, obtenerPokemon} = usePokemon()
 
   useEffect(() => {
-    obtenerPokemon(1000);
+    obtenerPokemon(151);
   }, []);
 
   useEffect(() => {

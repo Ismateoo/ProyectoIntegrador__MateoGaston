@@ -5,20 +5,21 @@ import PokemonTipos from "../PokemonTipos";
 import PokemonAbout from "../PokemonAbout";
 import PokemonDescription from "../PokemonDescription";
 import PokemonStats from "../PokemonStats";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import usePokemon from "../../Hooks/usePokemon";
 import { useEffect } from "react";
 
 export default function Pokemon() {
 
   const {id} = useParams();
-
+  let idNumero = Number(id)
+  /* const [idNumero, set] */
 
   const {mostrarUnPokemon, pokemon} = usePokemon()
 
   useEffect(() => {
     mostrarUnPokemon(id);
-  }, []);
+  }, [id]);
   
  
   
@@ -44,7 +45,21 @@ export default function Pokemon() {
 
       <div className={styles.datos}>
         <PokemonTipos tipos={tipos}/>
+        
+      <div className={styles.flechasNavegacion}>      
+      <Link to={`/pokemon/${idNumero-1}`}>   
+          {(idNumero!= 1 ?
+          <span className={styles.flechas}>{"<"}</span>
+          : <span> </span>)}
+      </Link>
 
+      <Link to={`/pokemon/${idNumero+1}`}>  
+        {(idNumero!= 151 ? 
+          <span className={styles.flechas}>{">"}</span> 
+          : <span> </span>)}  
+      </Link>
+      </div>
+      
         <PokemonAbout peso={pokemonPeso} altura={pokemonAltura} habilidades={pokemonHabilidades} color={color}/>
 
         <PokemonDescription descripcion={pokemonDescripcion}/>

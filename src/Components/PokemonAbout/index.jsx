@@ -31,7 +31,7 @@ export default function PokemonAbout({peso, altura, habilidades, color}){
 
           <div className={styles.caracteristicas}>
             <div className={styles.caracteristicas__habilidades}>
-              {habilidades && habilidades.map((habilidad) => <span>${habilidad.ability.name}</span>)}
+              {habilidades && habilidades.map((habilidad) => <span>{habilidad.ability.name}</span>)}
             </div>
             <div className={styles.caracteristicas__nombre}>
               <span>Moves</span>

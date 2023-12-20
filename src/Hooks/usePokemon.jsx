@@ -50,7 +50,11 @@ export default function usePokemon(){
         })
       }
 
+
+
+
+
     return(
-       {listapokemon, obtenerPokemon, mostrarUnPokemon, pokemon}
+       {listapokemon, obtenerPokemon, mostrarUnPokemon, pokemon, setlistaPokemon }
     )
 }

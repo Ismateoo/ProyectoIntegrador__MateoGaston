@@ -1,6 +1,12 @@
 import styles from "./styles.module.css"; 
+import React from "react";
 
-function Mainpoke({ search, handleSearchChange }) {
+
+ 
+function Mainpoke({ search, handleSearchChange, cambiarOrdenamiento, imagen}) {
+
+
+
   return (
     <div className={styles.app}>
       <header className={styles.header}>
@@ -8,10 +14,10 @@ function Mainpoke({ search, handleSearchChange }) {
           <img src="public/img/Pokeball.png" alt="Logo pokemon" />
           <h1>Pokédex</h1>
         </div>
-        <button className={styles.arrowButton}>
+        <button className={styles.arrowButton} onClick={cambiarOrdenamiento} >
           <h1>#</h1>
           <img
-            src="public/img/Arrow.svg"
+            src={imagen}
             alt="Arrow"
             className={styles.arrow}
           />

@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    margin: auto;
 }
 
 .datos{

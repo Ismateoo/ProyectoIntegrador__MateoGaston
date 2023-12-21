@@ -5,15 +5,16 @@ import PokemonTipos from "../PokemonTipos";
 import PokemonAbout from "../PokemonAbout";
 import PokemonDescription from "../PokemonDescription";
 import PokemonStats from "../PokemonStats";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import usePokemon from "../../Hooks/usePokemon";
 import { useEffect } from "react";
+import { useSwipeable } from "react-swipeable";
+import { useNavigate } from "react-router-dom";
 
 export default function Pokemon() {
-
+  const navigate = useNavigate();
   const {id} = useParams();
   let idNumero = Number(id)
-  /* const [idNumero, set] */
 
   const {mostrarUnPokemon, pokemon} = usePokemon()
 
@@ -21,6 +22,23 @@ export default function Pokemon() {
     mostrarUnPokemon(id);
   }, [id]);
  
+    const config = {
+      delta: 10,
+      preventScrollOnSwipe: false,
+      trackTouch: true,
+      trackMouse: true,
+      rotationAngle: 0,
+      swipeDuration: Infinity,
+      TouchEventOptions: {passive: true}
+    }
+
+  
+    const handlers = useSwipeable({
+      onSwipedLeft: () => navigate(`/pokemon/${idNumero+1}`),
+      onSwipedRight: () => navigate(`/pokemon/${idNumero-1}`),
+      ...config
+    });
+  
   
   let pokemonId = pokemon.id
   let pokemonName = pokemon.name
@@ -39,6 +57,7 @@ export default function Pokemon() {
   let pokemonSpd = pokemon.spd
   
   return (
+    <div {...handlers}>
     <div className={`${color}--background ${styles.container}`}>
       <PokemonHeader name={pokemonName} id={pokemonId} imagen={pokemonImagen}/>
 
@@ -65,6 +84,7 @@ export default function Pokemon() {
 
         <PokemonStats color={color} hp={pokemonHp} atk={pokemonAtk} def={pokemonDef} satk={pokemonSatk} sdef={pokemonSdef} spd={pokemonSpd}/>
       </div>
+    </div>
     </div>
   );
 }

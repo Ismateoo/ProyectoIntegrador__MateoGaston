@@ -1,4 +1,6 @@
 import styles from "./styles.module.css";
+import balanza from "/public/img/Weight.svg"
+import regla from "/public/img/Height.svg"
 
 export default function PokemonAbout({peso, altura, habilidades, color}){
     return(
@@ -11,7 +13,7 @@ export default function PokemonAbout({peso, altura, habilidades, color}){
 
           <div className={styles.caracteristicas}>
             <div className={styles.caracteristicas__numeros}>
-              <img src="public/img/Weight.svg" alt="" />
+              <img src={balanza} alt="" />
               <span>{peso} kg</span>
             </div>
             <div className={styles.caracteristicas__nombre}>
@@ -21,8 +23,8 @@ export default function PokemonAbout({peso, altura, habilidades, color}){
 
           <div className={`${styles.caracteristicas} ${styles.caracteristicas__peso}`}>
             <div className={styles.caracteristicas__numeros}>
-              <img src="public/img/Height.svg" alt="" />
-              <span>{altura} m</span>
+              <img src={regla} alt="" />
+              <span>{altura}0 cm</span>
             </div>
             <div className={styles.caracteristicas__nombre}>
               <span>Height</span>

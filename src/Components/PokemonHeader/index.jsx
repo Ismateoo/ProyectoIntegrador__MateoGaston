@@ -15,7 +15,8 @@ export default function PokemonHeader({name, id, imagen}) {
           </Link>
           <span className={styles.nombrePokemon}>{name}</span>
         </div>
-        <span className={styles.numeroPokemon}>{id}</span>
+        <span className={styles.numeroPokemon}>{"#" + String(id).padStart(3, '0')}
+        </span>
       </div>
 
       <div className={styles.imagen}>

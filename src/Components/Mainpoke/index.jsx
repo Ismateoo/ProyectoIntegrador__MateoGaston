@@ -2,8 +2,9 @@ import styles from "./styles.module.css";
 import React from "react";
 
 
+
  
-function Mainpoke({ search, handleSearchChange, cambiarOrdenamiento, imagen}) {
+function Mainpoke({ search, handleSearchChange, cambiarOrdenamiento, imagen, ordenamiento}) {
 
 
 
@@ -15,9 +16,9 @@ function Mainpoke({ search, handleSearchChange, cambiarOrdenamiento, imagen}) {
           <h1>Pokédex</h1>
         </div>
         <button className={styles.arrowButton} onClick={cambiarOrdenamiento} >
-          <h1>#</h1>
+        <h1>{ordenamiento === "numerico" ? "#" : "@"}</h1>
           <img
-            src={imagen}
+            src={"public/img/Arrow.svg"}
             alt="Arrow"
             className={styles.arrow}
           />

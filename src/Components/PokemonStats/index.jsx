@@ -1,10 +1,11 @@
+import BarraStats from "../BarraStats";
 import styles from "./styles.module.css";
 
 export default function PokemonStats({hp, atk, def, satk, sdef, spd, color}){
     return(
         <>
          <div className={styles.contenedorStats}>
-            <div className={`${styles.statsTitulo} grass`}>
+            <div className={`${styles.statsTitulo}`}>
                 <p className={color}>Base Stats</p>
             </div>
             <div className={styles.stats}>
@@ -26,13 +27,13 @@ export default function PokemonStats({hp, atk, def, satk, sdef, spd, color}){
                   <span>{spd}</span>
                 </div>
 
-                <div className={styles.stats__barra}>
-                  <span>-----------------------</span>
-                  <span>-----------------------</span>
-                  <span>-----------------------</span>
-                  <span>-----------------------</span>
-                  <span>-----------------------</span>
-                  <span>-----------------------</span>
+                <div className={styles.stats__barra}> 
+                  <span><BarraStats stat={hp} color={color}/></span>  
+                  <span><BarraStats stat={atk} color={color}/></span>
+                  <span><BarraStats stat={def} color={color}/></span>
+                  <span><BarraStats stat={satk} color={color}/></span>
+                  <span><BarraStats stat={sdef} color={color}/></span>
+                  <span><BarraStats stat={spd} color={color}/></span>          
                 </div>
             </div>
         </div>

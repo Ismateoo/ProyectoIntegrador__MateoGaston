@@ -232,3 +232,7 @@
     border: 2px solid #7037FF;
     border-radius: 15px;
 }   
+
+a{
+    text-decoration: none;
+}

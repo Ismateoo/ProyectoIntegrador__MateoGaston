@@ -1,5 +1,7 @@
 import styles from "./styles.module.css"; 
 import React from "react";
+import pokeball from "/public/img/Pokeball.png";
+import arrow from "/public/img/Arrow.svg"
 
 
 
@@ -12,13 +14,13 @@ function Mainpoke({ search, handleSearchChange, cambiarOrdenamiento, imagen, ord
     <div className={styles.app}>
       <header className={styles.header}>
         <div className={styles.title}>
-          <img src="public/img/Pokeball.png" alt="Logo pokemon" />
+          <img src={pokeball} alt="Logo pokemon" />
           <h1>Pokédex</h1>
         </div>
         <button className={styles.arrowButton} onClick={cambiarOrdenamiento} >
         <h1>{ordenamiento === "numerico" ? "#" : "@"}</h1>
           <img
-            src={"public/img/Arrow.svg"}
+            src={arrow}
             alt="Arrow"
             className={styles.arrow}
           />

@@ -1,11 +1,12 @@
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
+import pokeball from "/public/img/Pokeball.png";
 
 export default function PokemonHeader({name, id, imagen}) {
   return (
     <>
       <div className={styles.pokeball__contenedor}>
-        <img src="../public/img/Pokeball.png" alt="" className={styles.pokeball} />
+        <img src={pokeball} alt="" className={styles.pokeball} />
       </div>
 
       <div className={styles.nombreNumero}>

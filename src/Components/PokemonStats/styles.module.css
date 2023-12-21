@@ -10,13 +10,13 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    text-align: right;
 }
 
 .stats__nombre{
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    text-align: right;
 }
 
 .stats__cantidad{
@@ -28,5 +28,7 @@
 
 .stats__barra{
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    width: 220px;
+    gap: 15px;
 }

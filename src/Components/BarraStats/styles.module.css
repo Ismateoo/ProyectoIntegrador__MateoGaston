@@ -1,0 +1,16 @@
+.barraStat{
+    width: 220px;
+    height: 10px;
+    border-radius: 20px;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.barraIzq{
+    border-radius: 20px;
+    height: 10px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+} 
